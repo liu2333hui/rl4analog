@@ -1,0 +1,3 @@
+INCLUDE tech.lib
+#Removed by ddDeleteObj: DEFINE TIA /ubc/ece/home/ugrads/j/jm4304/RL/TIA/TIA
+DEFINE TIATest /ubc/ece/home/ugrads/j/jm4304/RL/TIA/TIATest

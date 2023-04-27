@@ -1,0 +1,116 @@
+/* Cadence IC6/GPDK45 Project Customization file
+   Cadence GPDK45NM  
+   PROC : 45nm mixed-signal
+   MIMCAP : 
+   METAL : 
+   Directory : GPDK45
+
+   Prepared by Feng Liu, CMC Microsystems
+   Date : Aug. 29, 2018
+*/
+
+;# 2020may05 FQL, PDK v6.0 installed
+;# 2020may05 FQL, PDK eda component installed 
+;# 2020may05 FQL, IO lib v3.3 installed
+
+printf("// \n")
+printf("// \n")
+printf("//          The Cadence GPDK045 \n")
+printf("//          45nm CMOS 11M/2P Generic PDK \n")
+printf("//            gpdk045   v6.0: The Virtuoso technology library \n")
+printf("//            gsclib045 v4.4: The multi-Vt standard cell library set \n")
+printf("//            giolib045 v3.3: The IO and bondpad cells library \n")
+printf("// \n")
+printf("// \n")
+
+;################################################
+;#
+;# SETTINGS FOR SKILL PATH and SKILL PROGRAMMING
+;#
+;################################################
+
+sstatus(writeProtect nil)
+
+let((skillPath)
+   skillPath= strcat(
+    ". ~ "                                          
+    prependInstallPath("samples/techfile ")         
+   )
+   setSkillPath(skillPath)
+)
+printf("END OF SKILL CUSTOMIZATION\n")
+
+;################################################
+;#                                           
+;# LOAD APPLICATION BIND KEY DEFINITIONS
+;#
+;################################################
+
+let( (bindKeyFileList file path saveSkillPath)
+    bindKeyFileList = '(
+                 "leBindKeys.il" 
+                 "schBindKeys.il"
+                    )
+    
+    path = strcat(
+              ".   ~   "
+              prependInstallPath("local ")
+              prependInstallPath("samples/local")
+             )
+    saveSkillPath=getSkillPath()
+    setSkillPath(path)
+ 
+   foreach(file bindKeyFileList
+       if(isFile(file) then
+          loadi(file)
+         )
+    )
+ 
+    setSkillPath(saveSkillPath)
+)
+printf("END OF Cadence BINDKEY CUSTOMIZATION\n")
+
+;################################################
+;#
+;# MISCELLANEOUS
+;#
+;################################################
+
+hiSetFilterOptions(t t t t t t t)
+hiFormApply( hiSysProps )
+
+printf("END OF USER CUSTOMIZATION\n")
+;
+;END OF USER CUSTOMIZATION
+
+;################################################
+;#
+;# Calibre setup
+;#
+;################################################
+
+;; Load Calibre Skill Interface if environment var is set
+mgc_home=getShellEnvVar("MGC_HOME")
+
+if( mgc_home!=nil && isDir(mgc_home) && isReadable(mgc_home) then
+    ; Load calibre.skl for Cadence versions 4.4 and greater
+    load(strcat(mgc_home "/shared/pkgs/icv/tools/queryskl/calibre.skl"))
+else;; Calibre setup
+
+;; Load Calibre Skill Interface if environment var is set
+mgc_home=getShellEnvVar("MGC_HOME")
+
+if( mgc_home!=nil && isDir(mgc_home) && isReadable(mgc_home) then
+    ; Load calibre.skl for Cadence versions 4.4 and greater
+    load(strcat(mgc_home "/shared/pkgs/icv/tools/queryskl/calibre.skl"))
+else
+    ; MGC_HOME is not set
+    printf("Calibre Skill Interface not loaded.\n")
+)
+;; End of Calibre Skill Interface
+    ; MGC_HOME is not set
+    printf("Calibre Skill Interface not loaded.\n")
+)
+printf("END OF Calibre CUSTOMIZATION\n")
+;; End of Calibre Skill Interface
+

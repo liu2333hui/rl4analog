@@ -1,0 +1,263 @@
+HEADER
+"PSFversion" "1.00"
+"simulator" "spectre"
+"version" "20.1.0.155.isr4"
+"date" "10:36:18 PM, Wed Apr 26, 2023"
+"design" "// Generated for: spectre"
+"analysis type" "info"
+"analysis name" "outputParameter"
+"analysis description" "Circuit Information"
+"xVecSorted" "unknown"
+"tolerance.relative" 0.00100000
+"ReferenceTemperature.Value" 27.0000
+"ReferenceTemperature.Units" "C"
+TYPE
+"bsim4~instparams" STRUCT(
+"tempeff" FLOAT DOUBLE PROP(
+"units" "C"
+"description" "Effective temperature for a single device"
+)
+"meff" FLOAT DOUBLE PROP(
+"description" "Effective multiplicity factor (m-factor)"
+)
+"weff" FLOAT DOUBLE PROP(
+"units" "m"
+"description" "Effective channel width (alias=lx62)"
+)
+"leff" FLOAT DOUBLE PROP(
+"units" "m"
+"description" "Effective channel length (alias=lx63)"
+)
+"weffcv" FLOAT DOUBLE PROP(
+"units" "m"
+"description" "Effective channel width for CV (alias=lx64)"
+)
+"leffcv" FLOAT DOUBLE PROP(
+"units" "m"
+"description" "Effective channel length for CV (alias=lx65)"
+)
+"vfbsd" FLOAT DOUBLE PROP(
+"units" "V"
+"description" "Flat band Voltage between the gate and Drain/source diffusions (alias=lx75)"
+)
+"rgbi" FLOAT DOUBLE PROP(
+"units" "Ohm"
+"description" "Gate bias-independent resistance"
+)
+"adeff" FLOAT DOUBLE PROP(
+"units" "m^2"
+"description" "Effective drain area"
+)
+"aseff" FLOAT DOUBLE PROP(
+"units" "m^2"
+"description" "Effective source area"
+)
+"pdeff" FLOAT DOUBLE PROP(
+"units" "m"
+"description" "Effective drain perimeter"
+)
+"pseff" FLOAT DOUBLE PROP(
+"units" "m"
+"description" "Effective source perimeter"
+)
+) PROP(
+"key" "inst"
+)
+"capacitor~instparams" STRUCT(
+"tempeff" FLOAT DOUBLE PROP(
+"units" "C"
+"description" "Effective temperature for a single device"
+)
+"meff" FLOAT DOUBLE PROP(
+"description" "Effective multiplicity factor (m-factor)"
+)
+"leff" FLOAT DOUBLE PROP(
+"units" "m"
+"description" "Effective capacitor length"
+)
+"weff" FLOAT DOUBLE PROP(
+"units" "m"
+"description" "Effective capacitor width"
+)
+"ceff" FLOAT DOUBLE PROP(
+"units" "F"
+"description" "Effective capacitance(alias=lv1)"
+)
+) PROP(
+"key" "inst"
+)
+"isource~instparams" STRUCT(
+"tempeff" FLOAT DOUBLE PROP(
+"units" "C"
+"description" "Effective temperature for a single device"
+)
+) PROP(
+"key" "inst"
+)
+"resistor~instparams" STRUCT(
+"leff" FLOAT DOUBLE PROP(
+"units" "m"
+"description" "Effective resistor length"
+)
+"weff" FLOAT DOUBLE PROP(
+"units" "m"
+"description" "Effective resistor width"
+)
+"reff" FLOAT DOUBLE PROP(
+"units" "Ohm"
+"description" "Effective resistance"
+)
+"ceff" FLOAT DOUBLE PROP(
+"units" "F"
+"description" "Effective capacitance"
+)
+"tempeff" FLOAT DOUBLE PROP(
+"units" "C"
+"description" "Effective temperature for a single device"
+)
+"meff" FLOAT DOUBLE PROP(
+"description" "Effective multiplicity factor (m-factor)"
+)
+) PROP(
+"key" "inst"
+)
+"vsource~instparams" STRUCT(
+"tempeff" FLOAT DOUBLE PROP(
+"units" "C"
+"description" "Effective temperature for a single device"
+)
+) PROP(
+"key" "inst"
+)
+VALUE
+"PM0" "bsim4~instparams" (
+2.700000000000000e+01
+1.000000000000000e+00
+8.790861630273744e-06
+1.800000000000000e-07
+8.812647370273744e-06
+1.800000000000000e-07
+-5.732969454163869e-03
+0.000000000000000e+00
+2.203161842568436e-12
+2.203161842568436e-12
+9.312647370273743e-06
+9.312647370273743e-06
+) PROP(
+"model" "PM0.pch.4"
+)
+"PM1" "bsim4~instparams" (
+2.700000000000000e+01
+1.000000000000000e+00
+8.090919454412220e-06
+1.800000000000000e-07
+8.112705194412220e-06
+1.800000000000000e-07
+-5.732969454163869e-03
+0.000000000000000e+00
+2.920573869988399e-12
+2.920573869988399e-12
+8.832705194412223e-06
+8.832705194412223e-06
+) PROP(
+"model" "PM1.pch.4"
+)
+"PM2" "bsim4~instparams" (
+2.700000000000000e+01
+1.000000000000000e+00
+8.422399761239509e-06
+1.800000000000000e-07
+8.444185501239509e-06
+1.800000000000000e-07
+-5.732969454163869e-03
+0.000000000000000e+00
+1.857720810272692e-12
+3.293232345483408e-12
+4.400000000000026e-07
+1.766837100247902e-05
+) PROP(
+"model" "PM2.pch.4"
+)
+"NM2" "bsim4~instparams" (
+2.700000000000000e+01
+1.000000000000000e+00
+9.252406707381242e-06
+1.780000000000000e-07
+9.256406707381243e-06
+1.800000000000000e-07
+1.207526022572706e-02
+0.000000000000000e+00
+2.036409475623873e-12
+3.609998615878684e-12
+4.400000000000026e-07
+1.929281341476249e-05
+) PROP(
+"model" "NM2.nch.4"
+)
+"NM1" "bsim4~instparams" (
+2.700000000000000e+01
+1.000000000000000e+00
+9.650719746747398e-06
+1.780000000000000e-07
+9.654719746747398e-06
+1.800000000000000e-07
+1.207526022572706e-02
+0.000000000000000e+00
+2.413679936686849e-12
+2.413679936686849e-12
+1.015471974674740e-05
+1.015471974674740e-05
+) PROP(
+"model" "NM1.nch.4"
+)
+"NM3" "bsim4~instparams" (
+2.700000000000000e+01
+1.000000000000000e+00
+8.777952921289090e-06
+1.780000000000000e-07
+8.781952921289090e-06
+1.800000000000000e-07
+1.207526022572706e-02
+0.000000000000000e+00
+3.161503051664072e-12
+3.161503051664072e-12
+9.501952921289094e-06
+9.501952921289094e-06
+) PROP(
+"model" "NM3.nch.4"
+)
+"C1" "capacitor~instparams" (
+2.700000000000000e+01
+1.000000000000000e+00
+nan
+nan
+1.000000000000000e-15
+) PROP(
+"model" "capacitor"
+)
+"I2" "isource~instparams" (
+2.700000000000000e+01
+) PROP(
+"model" "isource"
+)
+"R0" "resistor~instparams" (
+nan
+nan
+9.779020685329834e+02
+nan
+2.700000000000000e+01
+1.000000000000000e+00
+) PROP(
+"model" "resistor"
+)
+"V0" "vsource~instparams" (
+2.700000000000000e+01
+) PROP(
+"model" "vsource"
+)
+"V1" "vsource~instparams" (
+2.700000000000000e+01
+) PROP(
+"model" "vsource"
+)
+END

@@ -1,0 +1,1 @@
+ spectre  input.scs  +escchars +log ../psf/spectre.out  -format psfxl -raw ../psf   +aps +lqtimeout 900 -maxw 5 -maxn 5 -env ade   

@@ -1,0 +1,10 @@
+layout            instLibName     string  "gpdk045"
+layout            ySnapSpacing    float   0.01
+layout            xSnapSpacing    float   0.01
+
+layoutXL          sfactorNames    string  "sc SC"
+
+spectre.envOpts  modelFiles   string  "/CMC/kits/GPDK45/gpdk045_v_6_0/models/spectre/gpdk045.scs"
+spectre.envOpts  includePath  string  "/CMC/kits/GPDK45/gpdk045_v_6_0/models/spectre"
+spectre.opts     tnom         string  "25"
+
